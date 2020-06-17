@@ -7,7 +7,7 @@ import httpretty
 import mock
 import pytz
 from django.core.management import call_command
-from django.utils.six import StringIO
+from io import StringIO
 
 from ecommerce.courses.models import Course
 from ecommerce.courses.tests.factories import CourseFactory

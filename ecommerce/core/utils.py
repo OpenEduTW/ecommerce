@@ -6,7 +6,7 @@ import waffle
 from django.conf import settings
 from django.core.exceptions import ValidationError
 from edx_django_utils.cache import get_cache_key as get_django_cache_key
-from six.moves.urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, urlparse
 
 logger = logging.getLogger(__name__)
 

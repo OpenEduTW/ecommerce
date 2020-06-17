@@ -8,7 +8,7 @@ import requests
 from django.conf import settings
 from oscar.core.loading import get_model
 from oscar.test import factories
-from six.moves.urllib.parse import urlencode  # pylint: disable=import-error
+from urllib.parse import urlencode  # pylint: disable=import-error
 
 from ecommerce.core.constants import COUPON_PRODUCT_CLASS_NAME
 from ecommerce.courses.tests.factories import CourseFactory

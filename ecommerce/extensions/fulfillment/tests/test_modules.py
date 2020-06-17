@@ -15,8 +15,8 @@ from oscar.core.loading import get_class, get_model
 from oscar.test import factories
 from requests.exceptions import ConnectionError as ReqConnectionError
 from requests.exceptions import Timeout
-from six import assertCountEqual
-from six.moves.urllib.parse import urlencode
+from range import assertCountEqual
+from urllib.parse import urlencode
 from testfixtures import LogCapture
 from waffle.testutils import override_switch
 

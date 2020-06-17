@@ -2,7 +2,7 @@
 from __future__ import absolute_import
 
 from corsheaders.defaults import default_headers as corsheaders_default_headers
-from six.moves.urllib.parse import urljoin
+from urllib.parse import urljoin
 
 from ecommerce.settings.base import *
 

@@ -17,7 +17,7 @@ from factory.fuzzy import FuzzyInteger
 from oscar.apps.payment.exceptions import GatewayError
 from oscar.core.loading import get_model
 from paypalrestsdk.resource import Resource  # pylint:disable=ungrouped-imports
-from six.moves.urllib.parse import urljoin  # pylint: disable=import-error
+from urllib.parse import urljoin  # pylint: disable=import-error
 from testfixtures import LogCapture
 
 from ecommerce.core.tests import toggle_switch

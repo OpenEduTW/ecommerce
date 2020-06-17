@@ -5,7 +5,7 @@ import logging
 from functools import wraps
 
 from django.db import transaction
-from six.moves.urllib.parse import urlunsplit  # pylint: disable=import-error
+from urllib.parse import urlunsplit  # pylint: disable=import-error
 
 from ecommerce.courses.utils import mode_for_product
 
