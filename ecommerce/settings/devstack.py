@@ -1,5 +1,8 @@
 """Devstack settings"""
 # noinspection PyUnresolvedReferences
+from django.urls import reverse_lazy
+
+from SpgatewayCore import consts as spgateway_consts
 from ecommerce.settings._debug_toolbar import *  # isort:skip
 from ecommerce.settings.production import *
 
@@ -49,6 +52,16 @@ PAYMENT_PROCESSOR_CONFIG = {
             'receipt_path': PAYMENT_PROCESSOR_RECEIPT_PATH,
             'cancel_checkout_path': PAYMENT_PROCESSOR_CANCEL_PATH,
             'error_path': PAYMENT_PROCESSOR_ERROR_PATH,
+        },
+        'spgateway': {
+            'MerchantID': 'MS344996684',  # 'MS33510730',
+            'HashKey': 'vEfeSEYsHq016am0TRC0JBWDLMJPJM27',  # 'LcX6P1cR5gSv0deQWCEESEAGoytDhXX1',
+            'HashIV': '7TaTIX9JyeE263cE',  # 'GltSrziGr7ufw1Jh',
+            'error_path': PAYMENT_PROCESSOR_ERROR_PATH,
+            'cancel_checkout_path': PAYMENT_PROCESSOR_CANCEL_PATH,
+            'payment_page_url': spgateway_consts.MPG_URL,
+            'credit_close_url': spgateway_consts.CREDIT_CLOSE_URL,
+            'customer_url': reverse_lazy('spgateway.customer'),
         },
     },
 }
